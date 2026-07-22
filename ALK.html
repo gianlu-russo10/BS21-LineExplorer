@@ -1,0 +1,54 @@
+<!-- HEADER CENTRATO -->
+<h2 class="titolo-centrato">ALK - AstraLink</h2>
+
+<div class="container">
+
+  <div class="schema">
+    <svg viewBox="0 0 200 12000">
+
+      <!-- Linea principale -->
+      <line x1="100" y1="60" x2="100" y2="300"
+            stroke="#FF0000" stroke-width="10" />
+
+      <!-- Fermate -->
+      <circle cx="100" cy="60"  r="10" fill="#fff" stroke="#FF0000" stroke-width="4" />
+      <circle cx="100" cy="180" r="10" fill="#fff" stroke="#FF0000" stroke-width="4" />
+      <circle cx="100" cy="240" r="10" fill="#fff" stroke="#FF0000 " stroke-width="4" />
+      <circle cx="100" cy="300" r="10" fill="#fff" stroke="#FF0000" stroke-width="4" />
+
+      <!-- Etichette -->
+      <text x="120" y="65"  font-size="14" fill="#333">Northspoke</text>
+      <text x="120" y="125" font-size="14" fill="#333">Southspoke</text>
+      <text x="120" y="185" font-size="14" fill="#333">Oakstreet</text>
+      <text x="120" y="245" font-size="14" fill="#333">Victory Roak</text>
+      <text x="120" y="305" font-size="14" fill="#333">CENTRAL BUS S. (6)</text>
+
+    </svg>
+  </div>
+
+</div>
+
+<style>
+  .titolo-centrato {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-start; /* schema a sinistra */
+    max-width: 900px;
+    margin: 0 auto; /* centra il contenitore nella pagina */
+    font-family: sans-serif;
+  }
+
+  .schema {
+    flex: 0 0 250px; /* colonna sinistra */
+  }
+
+  svg {
+    width: 500px;
+    height: 12000px;
+  }
+</style>
