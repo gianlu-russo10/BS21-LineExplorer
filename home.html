@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Line Explorer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #001F42;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Barra superiore */
+    .top-bar {
+      background: white;
+      width: 90%;
+      max-width: 900px;
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #001F42;
+    }
+
+    /* Box Esci */
+    .logout-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 2px solid red;
+      border-radius: 8px;
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+      background: #fff;
+      transition: 0.2s;
+    }
+
+    .logout-box:hover {
+      background: #ffe5e5;
+    }
+
+    .logout-box svg {
+      stroke: red;
+    }
+
+    /* Box Linee */
+    .line-box {
+      background: white;
+      width: 90%;
+      max-width: 900px;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .line-item {
+      padding: 10px 0;
+      cursor: pointer;
+      color: #001F42;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .line-item:hover {
+      color: #005fa3;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barra superiore -->
+  <div class="top-bar">
+    <h2>Line Explorer – Benvenuto</h2>
+
+    <div class="logout-box" onclick="logout()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+      Esci
+    </div>
+  </div>
+
+  <!-- Box Linee -->
+<div class="line-box">
+
+    <!-- Titolo sezione -->
+    <h3 style="margin: 0; font-size: 20px; color: #001F42;">Seleziona la linea desiderata</h3>
+    <hr style="border: none; border-top: 2px solid #001F42; margin: 15px 0;">
+
+    <!-- Elenco linee -->
+    <div class="line-item" onclick="goToLine('linea1.html')">Linea 1</div>
+    <hr>
+
+    <div class="line-item" onclick="goToLine('linea2.html')">Linea 2</div>
+    <hr>
+
+    <div class="line-item" onclick="goToLine('linea3.html')">Linea 3</div>
+    <hr>
+
+    <div class="line-item" onclick="goToLine('linea4.html')">Linea 4</div>
+
+</div>
+
+
+  <script>
+    function logout() {
+      window.location.href = "index.html";
+    }
+
+    function goToLine(url) {
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
